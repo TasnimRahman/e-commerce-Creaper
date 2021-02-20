@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <script src="https://kit.fontawesome.com/75b60e16e5.js" crossorigin="anonymous"></script> 
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(img/loginbg3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .loginbox{
+            height: 320px;
+            width: 320px;
+            background-color: black;
+            top: 30%;
+            left: 35%;
+            position: absolute;
+            
+            padding: 50px 30px;
+        }
+        .logo{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(36%);
+        }
+        h1{
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .loginbox p{
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            color: white;
+        }
+        .loginbox input{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .loginbox input[type="text"], input[type="password"]{
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            height: 40px;
+            font-size: 16px;
+            color: white;
+            background: transparent;
+        }
+        .loginbox input[type="submit"]{
+            border: none;
+            height: 40px;
+            background-color: rgb(241, 52, 52);
+            color: white;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        .loginbox input[type="submit"]:hover{
+            background-color: green;
+            cursor: pointer;
+        }
+        .loginbox a{
+            text-decoration: none;
+            font-size: 15px;
+            color: darkgray;
+            line-height: 20px;
+        }
+        .loginbox a:hover{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="loginbox">
+        <img class="logo" src="img/login.png" alt="">
+        <h1>Login here</h1>
+        <form action="">
+            <p>User name</p>
+            <input type="text" name="" placeholder="Enter user name">
+            <p>Password</p>
+            <input type="password" name="" placeholder="Enter password">
+            <input type="submit" name="" value="Login">
+            <a href="#">Forgot password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+    </div>
+</body>

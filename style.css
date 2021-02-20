@@ -1,0 +1,315 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*header*/
+.s-wrap, .slide {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+  }
+   
+ 
+  .s-wrap {
+    background: rgb(145, 202, 145);
+    border: 1px solid white;
+    overflow: hidden; 
+  }
+   
+  .s-move {
+    position: relative;
+    bottom: 0%;
+  }
+   
+  
+  .slide { padding: 10px;
+    font-size: 20px; }
+  
+  
+  @keyframes slide {
+    
+    0% { bottom: 0; }
+    15% { bottom: 0; }
+    20% { bottom: 100%; }
+    35% { bottom: 100%; }
+    40% { bottom: 200%; }
+    55% { bottom: 200%; }
+    60% { bottom: 300%; }
+    75% { bottom: 300%; }
+    80% { bottom: 400%; }
+    95% { bottom: 400%; }
+    100% { bottom: 0; }
+  }
+  .s-move { animation: slide linear 10s infinite; }
+  .s-move:hover { animation-play-state: paused; }
+
+  h1{
+    font-family: 'Bangers', cursive;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 70px;
+    margin-left: 20px;
+    letter-spacing: 5px;
+}
+  /*navbar*/
+.navbar {
+  display: flex;
+  justify-content: left;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 50px; width: 100%;
+  list-style: none;
+ 
+}
+
+.navbar li {
+  width: 140px;
+  height: 50px;
+  transition: background-position-x 0.9s linear;
+  text-align: center;}
+
+.navbar li a{
+    font-size:22px;
+    color:black;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+  li:hover {
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+    animation: line 1s;
+  }
+
+  li:hover a {
+    color: #d94f5c;
+  }
+
+
+@keyframes line {
+  0% {
+    background-position-x: 400px;
+  }
+}
+
+
+.search input[type=text] {
+    width: 130px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    background-color: transparent;
+    background-image: url('img/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 8px 10px 4px 40px;
+    /*-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;*/
+  }
+  
+  .search input[type=text]:hover {
+    width: 100%;
+    background-color: rgb(145, 202, 145);
+  }
+ 
+ /*image slider*/
+.slider{
+	overflow: hidden;
+	height: 100vh;
+	position: relative;
+}
+.slider figure div{
+	width: 25%;
+	float: left;
+	position: relative;
+    margin-top: 5px;
+}
+.slider figure img{
+	width: 100%;
+	float: left;
+}
+.slider .slide img {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.slider .over:before {
+	content: '';
+	background: rgb(145, 202, 145);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+    z-index: 1000;
+}
+.slider-text h1{
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+}
+.slide a {
+    text-decoration: none;
+    color: black;
+    background: salmon;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 28px;
+    margin-top: 6px;
+    padding: 6px 35px;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+}
+.slide a:hover {
+    color: #ffffff;
+    background: tomato;
+    cursor: pointer;
+}
+.slider figure{
+	position: relative;
+	width: 400%;
+    height: 700px;
+	margin: 0;
+	left: 0;
+	animation: 40s sliding infinite;
+}
+.slide .slider-text {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes sliding{
+    0%{left: 0%; }
+    25%{left: -100%;}
+    50%{left: -200%;}
+    75%{left: -300%;}
+    100%{left: 0%;}
+} 
+
+
+
+/* start carousel */
+.text{
+    font-style: italic;
+    text-align: center;
+    background-color:white;
+    font-weight: 500;
+    padding: 20px 0px;
+}
+.first-line{
+    font-size: 50px;
+}
+
+    .best_sellers, .featured{
+        display: flex;
+        overflow-x: auto;
+        height: 500px;
+        width: 100%;
+        column-gap: 10px;
+        margin-top: 30px;
+       
+    }
+    
+    .image{
+        height: 400px;
+        width: 325px;
+    }
+    .carousel-image{
+        height: 350px;
+        width: 325px;
+    }
+    .list{
+        text-align: center;
+        height: 120px;
+        padding-top: 15px;
+        margin-top: -30px;
+        background-color: white;  
+    }
+    /*column*/
+    .column {
+        float: left;
+        padding: 10px;
+        height: 350px; 
+      }
+      
+      .left, .right {
+        width: 25%;
+      }
+      h3{
+         margin-left: 50px; 
+         margin-top: 30px;
+      }
+      h3:hover{
+        background: rgb(145, 202, 145);
+        cursor: pointer; 
+        height: 50px;
+        width: 200px;
+        border-radius: 20px;
+        text-align: center;
+        }
+
+      .middle {
+        width: 50%;
+      }
+      h2{
+          margin-left: 50px;
+          margin-top: 0px;
+      }
+      .feedback p{
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        color: black;font-size: 15px;
+    }
+      .feedback input[type="text"], input[type="email"], #textarea{
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        height: 40px;
+        font-size: 14px;
+        color: black;
+        background: transparent;
+    }
+
+    .feedback input[type="submit"]{
+        border: none;
+        height: 35px;
+        width: 100px;
+        background-color: rgb(241, 79, 79);
+        color: white;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-left: 100px;
+    }
+    .feedback input[type="submit"]:hover{
+        background-color: rgb(145, 202, 145);
+        color: black;
+        cursor: pointer;
+    }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+  .copyright{
+      text-align: center;
+      background-color:rgb(145, 202, 145);
+  }
+
+    
+
+
+ 
